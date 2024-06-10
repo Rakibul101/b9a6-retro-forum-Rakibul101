@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8723cc5cb2.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Retro Forum Website</title>
+</head>
+
+<body class="mt-4">
+    <header class="container mx-auto px-4 md:px-12">
+        <!---------- navbar start  -------->
+        <nav>
+            <div class="flex justify-between bg-base-100">
+                <div>
+                    <img src="images/logo.png" alt="">
+                </div>
+                <div class="flex gap-3">
+                    <div class="flex gap-2">
+
+                        <a href="#"><img src="images/Frame2.png" class="w-10 h-10 lg:w-14 lg:h-14" title="Home"
+                                alt=""></a>
+                        <a href="#"><img src="images/Frame3.png" class="w-10 h-10 lg:w-14 lg:h-14" title="Edit"
+                                alt=""></a>
+                        <a href="#"><img src="images/Frame4.png" class="w-10 h-10 lg:w-14 lg:h-14" title="Add"
+                                alt=""></a>
+                        <a href="#"><img src="images/Frame5.png" class="w-10 h-10 lg:w-14 lg:h-14" title="Flag"
+                                alt=""></a>
+                    </div>
+                    <div>
+                        <a class="btn bg-primary px-4 lg:px-8 rounded-3xl text-white">Sing In</a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <!----------  navbar end  -------->
+
+
+        <!-----------  banner start  ---------->
+        <section class="mt-12 h-full rounded-2xl bg-[#12132D]">
+            <div class="p-6 bg-[url('images/bgbanner.png')] bg-center bg-cover md:flex md:justify-around">
+                <div class="space-y-6 md:py-24">
+                    <h2 class="text-4xl md:text-7xl text-white font-semibold">Welcome to the<br> <span
+                            class="text-blue-500">ReTro</span> Forum</h2>
+                    <p class="text-[#ffffffcc]">Share your favorite opinion and win and wp<br> forum coffee mug!</p>
+                    
+                    <label class="md:w-1/2 input input-bordered pr-0 flex items-center gap-2">
+                        <input type="text" id="search-input" class="grow" placeholder="Search" />
+                        <span class="hover:cursor-pointer bg-blue-500 py-3 md:px-4 rounded" id="search-box" onclick="handleSearch()">Search</span>
+                      </label>
+                    
+                </div>
+
+                <div class="mt-2 flex flex-wrap gap-4 rounded-lg bg-white md:my-24">
+                    <div class=" md:px-16 space-y-4 md:py-16">
+                        <p>Registered Users</p>
+                        <p>Forum</p>
+                        <p>Topics</p>
+                        <p>Replies</p>
+                    </div>
+                    <div class="md:px-16 space-y-4 md:py-16">
+                        <p>01</p>
+                        <p>02</p>
+                        <p>03</p>
+                        <p>04</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div id="loading-spinner" class="my-40 text-center hidden ">
+            <span class="loading loading-spinner loading-lg"></span>
+        </div>
+    </header>
+    <main class="container mx-auto px-4 md:px-12">
+        <section class="text-center mt-24 mb-9">
+            <h2 class="text-5xl font-extrabold">Let's Discuss</h2>
+            <p class="mt-5">Yes, you can run unit tests and view the results directly within the app. The integrated
+                testing features allow for a streamlined .</p>
+        </section>
+        <!-- -----post data load section start--- -->
+        <div class="md:flex">
+            <div id="cart-container" class="md:mr-4 md:w-2/3">
+             
+            </div>
+            <div class="cart-title bg-[#797dfc1a] rounded-xl md:w-1/3">
+             <div class="flex pt-5 items-center justify-around">
+                <h2 class="text-xl font-semibold">Title</h2>
+                <p><span><i class="fa-solid text-green-400 text-sm fa-check-double"></i></span> Mark as read <span id="counter">(0)</span></p>
+             </div>
+             <div id="cart-info" class="mt-4">
+
+             </div>  
+            </div>
+        </div>
+
+        <section class="mt-24 mb-24">
+            <div class="hero bg-[#12132D] rounded-2xl">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                    <img src="images/joinforum.png" />
+                    <div>
+                        <h1 class="text-5xl font-bold text-white">Join Our Forum</h1>
+                        <p class="py-6 text-[#ffffffcc]">Share your favorite opinion and win and wp forum coffee mug!
+                            Yes, you can run unit tests and view the results directly within the app. </p>
+                        <button class="btn btn-primary text-white">Registered Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center mt-24 mb-9">
+            <h2 class="text-5xl font-extrabold">Latest Posts</h2>
+            <p class="mt-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+        </section>
+
+        <section id="show-card" class="md:flex gap-6">
+
+        </section>
+    </main>
+    <footer class="footer footer-center p-10 bg-[#12132d0d] text-primary-content">
+        <aside>
+            <h3 class="text-4xl text-[#12132D] font-bold">ReTro</h3>
+            <p class="text-[#12132db3]">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                in a piece of classical Latin literature from 45 BC</p>
+            <div class="space-x-4 text-[#12132D]">
+                <a href="#"><i class="fa-brands fa-twitter text-2xl"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                <a href="#"><i class="fa-brands fa-github text-2xl"></i></a>
+            </div>
+            <hr class="border border-1 w-full mt-3 mb-3 border-dotted text-[#12132db3]">
+            <p class="text-[#12132db3] mb-12">2024, All Rights Reserved.</p>
+        </aside>
+    </footer>
+    <script src="retro.js"></script>
+</body>
+
+</html>
